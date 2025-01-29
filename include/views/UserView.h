@@ -11,17 +11,21 @@ public:
         // Create an inja environment
         inja::Environment env;
 
-        // Load the template from a file
-        inja::Template temp = env.parse_template("views/user.html.j2");
+        try {
+            // Load the template from a file
+            inja::Template temp = env.parse_template("../views/user.html.j2");
 
-        // Create a JSON object with user data
-        nlohmann::json data;
-        data["name"] = user.getName();
-        data["age"] = user.getAge();
-        data["title"] = "User Profile";
+            // Create a JSON object with user data
+            nlohmann::json data;
+            data["name"] = user.getName();
+            data["age"] = user.getAge();
 
-        // Render the template with the data
-        return env.render(temp, data);
+            // Render the template with the data
+            return env.render(temp, data);
+        } catch (const std::exception& e) {
+            std::cerr << "Error in UserView::render: " << e.what() << "\n";
+            return "<html><body><h1>Error rendering template</h1></body></html>";
+        }
     }
 };
 
