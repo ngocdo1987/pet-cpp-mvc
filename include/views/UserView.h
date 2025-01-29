@@ -19,6 +19,7 @@ public:
             nlohmann::json data;
             data["name"] = user.getName();
             data["age"] = user.getAge();
+            data["title"] = "User Profile";
 
             // Render the template with the data
             return env.render(temp, data);
