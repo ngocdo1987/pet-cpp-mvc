@@ -1,13 +1,12 @@
 #include "httplib.h"
+#include "controllers/HomeController.h"
 #include "controllers/UserController.h"
 
 int main() {
     httplib::Server svr;
 
     // Home route
-    svr.Get("/", [](const httplib::Request& req, httplib::Response& res) {
-        res.set_content("Welcome to the C++ MVC Framework!", "text/plain");
-    });
+    svr.Get("/", HomeController::index);
 
     // User route
     svr.Get("/user", UserController::showUser);
