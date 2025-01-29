@@ -9,9 +9,9 @@ class UserController {
 public:
     static void showUser(const httplib::Request& req, httplib::Response& res) {
         // Create a sample user (in a real app, this would come from a database)
-        User user("Ngoc Do", 38);
+        User user("John Doe", 30);
 
-        // Render the view
+        // Render the view using Inja
         std::string html = UserView::render(user);
         res.set_content(html, "text/html");
     }
