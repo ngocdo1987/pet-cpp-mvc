@@ -2,6 +2,7 @@
 #define HOMECONTROLLER_H
 
 #include <httplib.h>
+#include "views/HomeView.h"
 
 class HomeController {
 public:
