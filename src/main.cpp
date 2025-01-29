@@ -6,7 +6,7 @@ int main() {
 
     // Home route
     svr.Get("/", [](const httplib::Request& req, httplib::Response& res) {
-        res.set_content("Welcome to the MVC Framework!", "text/plain");
+        res.set_content("Welcome to the C++ MVC Framework!", "text/plain");
     });
 
     // User route

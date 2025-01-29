@@ -9,7 +9,7 @@ class UserController {
 public:
     static void showUser(const httplib::Request& req, httplib::Response& res) {
         // Create a sample user (in a real app, this would come from a database)
-        User user("John Doe", 30);
+        User user("Ngoc Do", 38);
 
         // Render the view
         std::string html = UserView::render(user);
