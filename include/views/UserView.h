@@ -13,7 +13,7 @@ public:
 
         try {
             // Load the template from a file
-            inja::Template temp = env.parse_template("../views/user.html.j2");
+            inja::Template temp = env.parse_template("include/views/user.html.j2");
 
             // Create a JSON object with user data
             nlohmann::json data;
