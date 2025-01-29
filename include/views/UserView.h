@@ -2,7 +2,7 @@
 #define USERVIEW_H
 
 #include <string>
-#include "inja.hpp"
+#include <inja/inja.hpp>
 #include "models/User.h"
 
 class UserView {

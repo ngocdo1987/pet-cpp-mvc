@@ -2,7 +2,7 @@
 #define HOMEVIEW_H
 
 #include <string>
-#include "inja.hpp"
+#include <inja/inja.hpp>
 
 class HomeView {
 public:
